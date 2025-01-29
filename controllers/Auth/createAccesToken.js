@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 
 const CreateAccesToken = async (req, res) => {
+  const { uid } = req.query;
   try {
     if (!uid) {
       return res
