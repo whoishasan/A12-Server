@@ -2,6 +2,7 @@ import VerifyAdmin from "../../middlewares/verifyAdmin.js";
 import { UserModel } from "../../models/user.model.js";
 
 const UserDetails = async (req, res) => {
+  const { uid } = req.query;
   try {
     const user = await UserModel.findOne({ uid });
     if (!user) {
