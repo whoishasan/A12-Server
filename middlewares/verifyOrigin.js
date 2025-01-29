@@ -1,5 +1,6 @@
 const VerifyOrigin = (req, res, next) => {
   try {
+    const requestOrigin = req.headers.origin;
     const allowedOrigin = new URL(process.env.ORIGIN);
 
     if (
