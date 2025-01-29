@@ -1,6 +1,7 @@
 import { UserModel } from "../../models/user.model.js";
 
 const CreateNewUser = async (req, res) => {
+  const { email, uid, name, avatar, bloodGroup, district, upazila } = req.body;
   if (
     !email ||
     !uid ||
