@@ -4,7 +4,9 @@ const VerifyVolunteer = async (uid) => {
   try {
     const volunteerDetails = await UserModel.findOne({ uid });
     return volunteerDetails?.role === "volunteer";
-  } catch (err) {}
+  } catch (err) {
+    return false;
+  }
 };
 
 export default VerifyVolunteer;
